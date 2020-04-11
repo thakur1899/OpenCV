@@ -1,0 +1,17 @@
+import numpy as np
+import cv2
+
+
+
+image = cv2.imread('goku.png')
+
+h, w = image.shape[:2]
+
+transition_matrix = np.float32([[1, 0, w//4],
+								[0, 1, h//2]])
+
+image_transit = cv2.warpAffine(image, transition_matrix, (w, h))
+
+cv2.imshow('image', image)
+cv2.imshow('image_transit', image_transit)
+cv2.waitKey(0)
