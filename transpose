@@ -1,0 +1,11 @@
+import numpy as np
+import cv2
+
+image = cv2.imread('goku.png')
+
+h, w = image.shape[:2]
+
+transpose_image = cv2.transpose(image)
+cv2.imshow('image', image)
+cv2.imshow('transpose_image', transpose_image)
+cv2.waitkey(0)
