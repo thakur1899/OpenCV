@@ -1,0 +1,18 @@
+
+import numpy as np
+import cv2
+
+
+
+image = cv2.imread('goku.png')
+
+h, w = image.shape[:2]
+
+
+rotational_matrix = cv2.getRotationMatrix2D((h/2, w/2), -180, 0.5)bitwise_and(square, ellipse)
+rotational_image = cv2.warpAffine(image, rotational_matrix, (w, h))
+
+cv2.imshow('image', image)
+cv2.imshow('rotational_matrix', rotational_image)
+
+cv2.waitKey(0)
